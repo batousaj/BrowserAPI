@@ -108,6 +108,20 @@
                                     <action selector="onClickLogin" destination="BYZ-38-t0r" eventType="touchUpInside" id="Erv-1T-Ox4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byd-dY-LPh">
+                                <rect key="frame" x="50" y="614" width="314" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5B4-Ez-lbo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginByUpFlash" destination="BYZ-38-t0r" eventType="touchUpInside" id="QII-Bg-WVy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -116,6 +130,9 @@
                             <constraint firstItem="eeg-Qz-F4T" firstAttribute="top" secondItem="USA-k5-lbm" secondAttribute="bottom" constant="50" id="aYa-uU-BHW"/>
                             <constraint firstItem="SzM-k8-ucd" firstAttribute="top" secondItem="baw-8d-our" secondAttribute="bottom" constant="50" id="auB-A0-n3T"/>
                             <constraint firstItem="USA-k5-lbm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="b6f-Th-cS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byd-dY-LPh" secondAttribute="trailing" constant="50" id="biu-Ro-jSd"/>
+                            <constraint firstItem="byd-dY-LPh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="iJz-So-Wch"/>
+                            <constraint firstItem="byd-dY-LPh" firstAttribute="top" secondItem="SzM-k8-ucd" secondAttribute="bottom" constant="50" id="jvK-gS-FWh"/>
                             <constraint firstItem="USA-k5-lbm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="nZh-g3-l8e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SzM-k8-ucd" secondAttribute="trailing" constant="50" id="plO-VQ-Cwa"/>
                             <constraint firstItem="SzM-k8-ucd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zec-EG-kh1"/>
@@ -124,6 +141,7 @@
                     <connections>
                         <outlet property="hiddenPass" destination="Okj-KC-0BU" id="xqq-c5-rt1"/>
                         <outlet property="loginButton" destination="SzM-k8-ucd" id="NoE-rW-hRc"/>
+                        <outlet property="loginByOther" destination="byd-dY-LPh" id="to8-ri-QBF"/>
                         <outlet property="passField" destination="6uD-0b-lTM" id="aZb-3p-AAB"/>
                         <outlet property="userField" destination="x57-Fi-paN" id="MhW-xv-aGe"/>
                     </connections>
@@ -132,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="92.410714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--New Login View-->
         <scene sceneID="hI0-yy-WtR">
             <objects>
-                <viewController id="Txs-q2-cCu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewLogin" id="Txs-q2-cCu" customClass="NewLoginView" customModule="BrowserapiIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpf-u6-3Sw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,46 +172,10 @@
                     <view key="view" contentMode="scaleToFill" id="p9l-MW-DEt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-8G-x3U">
-                                <rect key="frame" x="80" y="248" width="254" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="qxy-e3-o5p"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <action selector="onClickAddImage" destination="N9C-uF-ObO" eventType="touchUpInside" id="sfO-YL-apO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFM-SN-SGh">
-                                <rect key="frame" x="100" y="508" width="214" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="wEo-5Y-c9r"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add picture"/>
-                                <connections>
-                                    <action selector="onClickUploadImage" destination="N9C-uF-ObO" eventType="touchUpInside" id="kab-Hn-IHt"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GLU-HX-Vic"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dFM-SN-SGh" firstAttribute="top" secondItem="lCy-8G-x3U" secondAttribute="bottom" constant="60" id="Mok-OD-HsM"/>
-                            <constraint firstItem="dFM-SN-SGh" firstAttribute="leading" secondItem="GLU-HX-Vic" secondAttribute="leading" constant="100" id="auo-TP-Ju8"/>
-                            <constraint firstItem="GLU-HX-Vic" firstAttribute="trailing" secondItem="lCy-8G-x3U" secondAttribute="trailing" constant="80" id="fwp-ie-6WV"/>
-                            <constraint firstItem="GLU-HX-Vic" firstAttribute="trailing" secondItem="dFM-SN-SGh" secondAttribute="trailing" constant="100" id="pbh-MF-l9I"/>
-                            <constraint firstItem="lCy-8G-x3U" firstAttribute="leading" secondItem="GLU-HX-Vic" secondAttribute="leading" constant="80" id="uRa-n2-e5M"/>
-                            <constraint firstItem="lCy-8G-x3U" firstAttribute="top" secondItem="GLU-HX-Vic" secondAttribute="top" constant="200" id="zgg-yC-qib"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9D3-ry-jEQ"/>
-                    <connections>
-                        <outlet property="addImageButton" destination="lCy-8G-x3U" id="hG2-ZF-atQ"/>
-                        <outlet property="uploadBut" destination="dFM-SN-SGh" id="nNq-Pf-8oD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9E-xg-w23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

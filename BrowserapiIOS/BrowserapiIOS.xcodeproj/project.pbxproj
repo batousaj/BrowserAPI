@@ -10,6 +10,8 @@
 		B15350B128E1721C00F2B8E6 /* UploadImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15350B028E1721C00F2B8E6 /* UploadImageVC.swift */; };
 		B15350B528E19A9700F2B8E6 /* APIManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15350B428E19A9600F2B8E6 /* APIManagement.swift */; };
 		B15350B728E1B0BB00F2B8E6 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15350B628E1B0BB00F2B8E6 /* Alert+Extension.swift */; };
+		B15350B928E2BB0000F2B8E6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15350B828E2BB0000F2B8E6 /* Utilities.swift */; };
+		B15350BF28E2E57500F2B8E6 /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15350BE28E2E57500F2B8E6 /* NewLoginView.swift */; };
 		B1F7B59C28DC4E3B00252C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B59B28DC4E3B00252C79 /* AppDelegate.swift */; };
 		B1F7B59E28DC4E3B00252C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B59D28DC4E3B00252C79 /* SceneDelegate.swift */; };
 		B1F7B5A028DC4E3B00252C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F7B59F28DC4E3B00252C79 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		B15350B028E1721C00F2B8E6 /* UploadImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageVC.swift; sourceTree = "<group>"; };
 		B15350B428E19A9600F2B8E6 /* APIManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagement.swift; sourceTree = "<group>"; };
 		B15350B628E1B0BB00F2B8E6 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		B15350B828E2BB0000F2B8E6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B15350BE28E2E57500F2B8E6 /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
 		B1F7B59828DC4E3B00252C79 /* BrowserapiIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserapiIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F7B59B28DC4E3B00252C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1F7B59D28DC4E3B00252C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B106848D28E2F1DB0083FEC8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7B59F28DC4E3B00252C79 /* ViewController.swift */,
+				B15350B028E1721C00F2B8E6 /* UploadImageVC.swift */,
+				B15350BE28E2E57500F2B8E6 /* NewLoginView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B106848E28E2F1F10083FEC8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7B5B228DC57C800252C79 /* Package.swift */,
+				B15350B428E19A9600F2B8E6 /* APIManagement.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B106848F28E2F2050083FEC8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B15350B628E1B0BB00F2B8E6 /* Alert+Extension.swift */,
+				B15350B828E2BB0000F2B8E6 /* Utilities.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B1F7B58F28DC4E3B00252C79 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +98,16 @@
 		B1F7B59A28DC4E3B00252C79 /* BrowserapiIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B106848F28E2F2050083FEC8 /* Helper */,
+				B106848E28E2F1F10083FEC8 /* API */,
+				B106848D28E2F1DB0083FEC8 /* ViewController */,
 				B1F7B59B28DC4E3B00252C79 /* AppDelegate.swift */,
 				B1F7B59D28DC4E3B00252C79 /* SceneDelegate.swift */,
-				B1F7B59F28DC4E3B00252C79 /* ViewController.swift */,
 				B1F7B5A128DC4E3B00252C79 /* Main.storyboard */,
 				B1F7B5A728DC4E3E00252C79 /* Assets.xcassets */,
 				B1F7B5A928DC4E3E00252C79 /* LaunchScreen.storyboard */,
 				B1F7B5AC28DC4E3E00252C79 /* Info.plist */,
 				B1F7B5A428DC4E3B00252C79 /* BrowserapiIOS.xcdatamodeld */,
-				B1F7B5B228DC57C800252C79 /* Package.swift */,
-				B15350B028E1721C00F2B8E6 /* UploadImageVC.swift */,
-				B15350B428E19A9600F2B8E6 /* APIManagement.swift */,
-				B15350B628E1B0BB00F2B8E6 /* Alert+Extension.swift */,
 			);
 			path = BrowserapiIOS;
 			sourceTree = "<group>";
@@ -154,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15350B728E1B0BB00F2B8E6 /* Alert+Extension.swift in Sources */,
+				B15350BF28E2E57500F2B8E6 /* NewLoginView.swift in Sources */,
+				B15350B928E2BB0000F2B8E6 /* Utilities.swift in Sources */,
 				B1F7B5A028DC4E3B00252C79 /* ViewController.swift in Sources */,
 				B15350B528E19A9700F2B8E6 /* APIManagement.swift in Sources */,
 				B1F7B5B328DC57C800252C79 /* Package.swift in Sources */,
@@ -315,6 +347,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +376,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
